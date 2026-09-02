@@ -2,32 +2,27 @@ const domains = [
   {
     icon: "🎓",
     title: "Education",
-    description:
-      "Teaching, academics, and student development.",
+    description: "Teaching, academics, and student development.",
   },
   {
-    icon: "💼",
+    icon: "▣",
     title: "Business",
-    description:
-      "Management, finance, marketing, and entrepreneurship.",
+    description: "Management, finance, marketing, and entrepreneurship.",
   },
   {
     icon: "🏆",
     title: "Sports",
-    description:
-      "Coaching, fitness, management, and analytics.",
+    description: "Coaching, management, fitness, and sports sciences.",
   },
   {
-    icon: "⚕",
+    icon: "♡",
     title: "Medical",
-    description:
-      "Healthcare, nursing, research, and patient care.",
+    description: "Healthcare, nursing, research, and patient care.",
   },
   {
     icon: "⚙",
     title: "Engineering",
-    description:
-      "Technology, innovation, systems, and development.",
+    description: "Technology, innovation, and problem solving.",
   },
 ];
 
@@ -35,18 +30,18 @@ export default function CareerDomainsSection() {
   return (
     <section className="career-domains-section">
       <div className="container">
-        <div className="section-header domains-header">
+        <div className="domains-heading">
           <div className="section-tag">
             EXPLORE CAREER DOMAINS
           </div>
 
-          <h2 className="section-title">
+          <h2>
             Find the perfect path for your future.
           </h2>
 
-          <p className="section-description">
-            Explore diverse career opportunities and discover a path that
-            matches your interests, skills, and ambitions.
+          <p>
+            Explore different fields and discover your strengths
+            and interests to make confident career decisions.
           </p>
         </div>
 
@@ -57,9 +52,13 @@ export default function CareerDomainsSection() {
                 {domain.icon}
               </div>
 
-              <h3>{domain.title}</h3>
+              <h3>
+                {domain.title}
+              </h3>
 
-              <p>{domain.description}</p>
+              <p>
+                {domain.description}
+              </p>
 
               <a href="#">
                 Explore →

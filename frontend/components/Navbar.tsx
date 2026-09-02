@@ -5,7 +5,8 @@ export default function Navbar() {
     <header className="navbar">
       <div className="nav-container">
         <Link href="/" className="logo">
-          Mentro
+          <span className="logo-mark">M</span>
+          <span>Mentroo</span>
         </Link>
 
         <nav className="nav-links">
@@ -31,8 +32,12 @@ export default function Navbar() {
         </nav>
 
         <div className="nav-actions">
+          <button className="theme-button" aria-label="Theme">
+            ◔
+          </button>
+
           <Link href="/login" className="login-link">
-            Log in
+            Login
           </Link>
 
           <Link href="/get-started" className="nav-button">

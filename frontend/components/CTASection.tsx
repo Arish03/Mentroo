@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function CTASection() {
   return (
     <section className="cta-section">
@@ -7,11 +9,9 @@ export default function CTASection() {
         </div>
 
         <h2>
-          Join thousands of students and
+          Join thousands of students and professionals
           <br />
-          professionals who have discovered
-          <br />
-          a clearer career path.
+          who have discovered a clearer career path.
         </h2>
 
         <p>
@@ -19,9 +19,13 @@ export default function CTASection() {
           and building a future you can be proud of.
         </p>
 
-        <button className="cta-button">
-          Start Your Career Journey →
-        </button>
+        <Link
+          href="/get-started"
+          className="cta-button"
+        >
+          Start Your Career Journey
+          <span>→</span>
+        </Link>
       </div>
     </section>
   );

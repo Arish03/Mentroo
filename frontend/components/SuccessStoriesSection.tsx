@@ -1,58 +1,56 @@
 const stories = [
   {
     quote:
-      "The AI guide helped me understand my strengths and explore career options I had never considered before.",
-    name: "Priya Sharma",
-    role: "Computer Science Student",
-    initials: "PS",
+      "The AI guide helped me understand my strengths and explore career options I had never considered before. Mentroo made my decision so much easier.",
+    name: "Emily Chen",
+    role: "Final Year Student",
+    initials: "EC",
   },
   {
     quote:
-      "The assessment gave me much more clarity about my future. I finally understood which career path suited me.",
-    name: "Rahul Kumar",
-    role: "Business Graduate",
-    initials: "RK",
+      "The assessment gave me much more clarity about my future. I finally understood which career path matches my skills and interests.",
+    name: "David Kim",
+    role: "Software Developer",
+    initials: "DK",
   },
   {
     quote:
-      "The guidance from experienced professionals made a huge difference. I feel much more confident about my career.",
-    name: "Ananya Singh",
-    role: "Aspiring Designer",
-    initials: "AS",
+      "The guidance from experienced professionals made a huge difference. I feel more confident and ready to grow in my career.",
+    name: "Sarah Williams",
+    role: "Marketing Manager",
+    initials: "SW",
   },
 ];
 
 export default function SuccessStoriesSection() {
   return (
-    <section className="success-stories-section">
+    <section className="success-section">
       <div className="container">
-        <div className="section-header">
+        <div className="success-heading">
           <div className="section-tag">
             SUCCESS STORIES
           </div>
-
-          <h2 className="section-title">
-            Real people. Real career progress.
-          </h2>
-
-          <p className="section-description">
-            Discover how Mentro is helping people find clarity, confidence,
-            and direction for their future.
-          </p>
         </div>
 
         <div className="success-grid">
           {stories.map((story) => (
-            <div className="success-card" key={story.name}>
-              <div>
-                <div className="success-rating">
+            <article
+              className="success-card"
+              key={story.name}
+            >
+              <div className="success-card-top">
+                <div className="success-stars">
                   ★★★★★
                 </div>
 
-                <p className="success-quote">
-                  &quot;{story.quote}&quot;
-                </p>
+                <span className="quote-mark">
+                  99
+                </span>
               </div>
+
+              <p className="success-quote">
+                &quot;{story.quote}&quot;
+              </p>
 
               <div className="success-user">
                 <div className="success-avatar">
@@ -60,12 +58,16 @@ export default function SuccessStoriesSection() {
                 </div>
 
                 <div>
-                  <h4>{story.name}</h4>
+                  <strong>
+                    {story.name}
+                  </strong>
 
-                  <p>{story.role}</p>
+                  <span>
+                    {story.role}
+                  </span>
                 </div>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>
