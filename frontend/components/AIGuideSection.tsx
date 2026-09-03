@@ -16,105 +16,113 @@ const features = [
   },
 ];
 
+const suggestions = [
+  {
+    icon: "⚙",
+    title: "Software Engineering",
+    match: "94% Match",
+  },
+  {
+    icon: "▣",
+    title: "Data Science",
+    match: "89% Match",
+  },
+  {
+    icon: "✦",
+    title: "AI / Machine Learning",
+    match: "86% Match",
+  },
+];
+
 export default function AIGuideSection() {
   return (
     <section className="ai-guide-section">
       <div className="ai-guide-grid">
+        {/* LEFT CONTENT */}
         <div className="ai-guide-content">
-          <div className="section-tag">
-            AI-POWERED CAREER GUIDANCE
-          </div>
+          <div className="section-tag">MEET YOUR AI GUIDE</div>
 
           <h2>
-            Your personal AI
+            Your personal AI career
             <br />
-            career companion.
+            companion.
           </h2>
 
-          <p>
-            Get personalized career guidance powered by artificial intelligence.
-            Explore opportunities, understand your strengths, and make confident
-            decisions about your future.
+          <p className="ai-guide-description">
+            Get intelligent career assistance anytime, anywhere. Our AI helps
+            you discover the best career paths for you, understand your
+            strengths, explore opportunities, and make confident decisions
+            about your future.
           </p>
 
           <div className="ai-features">
             {features.map((feature) => (
               <div className="ai-feature" key={feature.title}>
-                <div className="ai-feature-icon">
-                  ✓
-                </div>
+                <div className="ai-feature-icon">✓</div>
 
                 <div>
                   <strong>{feature.title}</strong>
-
                   <p>{feature.description}</p>
                 </div>
               </div>
             ))}
           </div>
 
-          <button className="primary-button">
-            Explore AI Career Guide →
+          <button className="primary-button ai-guide-button">
+            Try AI Assistant Now →
           </button>
         </div>
 
+        {/* RIGHT AI CARD */}
         <div className="ai-guide-visual">
           <div className="ai-guide-panel">
+            {/* Header */}
             <div className="ai-panel-header">
-              <div className="ai-avatar">
-                ✦
+              <div className="ai-avatar">✦</div>
+
+              <div className="ai-panel-title">
+                <strong>Career AI</strong>
+                <span>Online</span>
               </div>
 
-              <div>
-                <strong>Mentro AI</strong>
-                <span>AI Career Assistant</span>
-              </div>
-
-              <small>Online</small>
+              <div className="ai-online-indicator" />
             </div>
 
+            {/* User message */}
             <div className="ai-message user-message">
               I&apos;m interested in finding a career path that matches me.
             </div>
 
+            {/* AI message */}
             <div className="ai-message assistant-message">
-              Based on your interests, here are some career paths you may enjoy.
+              Based on your interests, here are 3 great paths to consider:
             </div>
 
-            <div className="career-suggestion">
-              <span>🎓</span>
-              <div>
-                <strong>Education</strong>
-                <small>High career match</small>
-              </div>
-              <b>94%</b>
+            {/* Suggestions */}
+            <div className="career-suggestions">
+              {suggestions.map((suggestion) => (
+                <div className="career-suggestion" key={suggestion.title}>
+                  <div className="career-suggestion-icon">
+                    {suggestion.icon}
+                  </div>
+
+                  <div className="career-suggestion-info">
+                    <strong>{suggestion.title}</strong>
+                    <small>{suggestion.match}</small>
+                  </div>
+                </div>
+              ))}
             </div>
 
-            <div className="career-suggestion">
-              <span>💼</span>
-              <div>
-                <strong>Business</strong>
-                <small>Strong opportunity match</small>
-              </div>
-              <b>89%</b>
-            </div>
-
-            <div className="career-suggestion">
-              <span>⚙</span>
-              <div>
-                <strong>Technology</strong>
-                <small>Growing career path</small>
-              </div>
-              <b>86%</b>
-            </div>
-
+            {/* Explore button */}
             <button className="explore-path-button">
-              Explore Career Paths →
+              Explore My Career Path →
             </button>
 
+            {/* Input */}
             <div className="ai-input">
-              Ask your career question...
-              <span>➤</span>
+              <span>Ask your career question...</span>
+              <button>➤</button>
             </div>
           </div>
         </div>

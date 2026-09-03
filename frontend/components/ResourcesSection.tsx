@@ -1,34 +1,32 @@
-"use client";
-
 import Link from "next/link";
 
 const resources = [
   {
-    category: "CAREER GUIDE",
+    category: "CAREER GUIDES",
     title: "How to Choose the Right Career Path",
     description:
-      "Learn how to understand your interests, strengths, and career opportunities before choosing your next step.",
-    readTime: "5 min read",
-    type: "Guide",
-    icon: "✦",
+      "A complete guide to identifying your strengths, interests, and choosing the best career path.",
+    meta: "5 min read  ·  Dec 12, 2024",
+    image:
+      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=90",
   },
   {
     category: "EXPERT ADVICE",
     title: "How to Choose the Right College",
     description:
-      "Discover important factors to consider when selecting a college that supports your academic and career goals.",
-    readTime: "6 min read",
-    type: "Advice",
-    icon: "⌕",
+      "Important factors to consider before selecting a college that supports your academic and career goals.",
+    meta: "6 min read  ·  Dec 10, 2024",
+    image:
+      "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=900&q=90",
   },
   {
     category: "CAREER PLANNING",
-    title: "Preparing for Your Future",
+    title: "Choosing the Right Course for Your Future",
     description:
-      "Build confidence in your future by planning your career journey with practical steps and clear direction.",
-    readTime: "4 min read",
-    type: "Planning",
-    icon: "↗",
+      "Explore how the right course can shape your future and help you achieve your career aspirations.",
+    meta: "4 min read  ·  Dec 8, 2024",
+    image:
+      "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?auto=format&fit=crop&w=900&q=90",
   },
 ];
 
@@ -38,57 +36,57 @@ export default function ResourcesSection() {
       <div className="container">
         <div className="resources-heading">
           <div>
-            <div className="section-tag">CAREER RESOURCES</div>
+            <div className="section-tag">
+              CAREER INSIGHTS &amp; RESOURCES
+            </div>
 
-            <h2>
-              Explore resources to help you
-              <br />
-              move forward.
-            </h2>
-
-            <p className="section-description">
-              Stay informed with useful guides, expert insights, and practical
-              resources to support your career journey.
+            <p>
+              Stay updated with the latest articles, tips and
+              industry insights.
             </p>
           </div>
 
-          <Link href="/resources" className="consultants-view-button">
+          <Link
+            href="/resources"
+            className="section-link-button"
+          >
             View All Resources →
           </Link>
         </div>
 
         <div className="resources-grid">
-          {resources.map((resource, index) => (
-            <article className="resource-card" key={index}>
-              {/* RESOURCE VISUAL */}
-              <div className={`resource-visual resource-visual-${index + 1}`}>
-                <div className="resource-visual-overlay">
-                  <div className="resource-visual-icon">
-                    {resource.icon}
-                  </div>
-                </div>
+          {resources.map((resource) => (
+            <article
+              className="resource-card"
+              key={resource.title}
+            >
+              <div className="resource-image">
+                <img
+                  src={resource.image}
+                  alt={resource.title}
+                />
+
+                <span className="resource-badge">
+                  {resource.category}
+                </span>
               </div>
 
-              {/* CONTENT */}
-              <div className="resource-content">
-                <div className="resource-category">
-                  {resource.category}
-                </div>
+              <div className="resource-info">
+                <h3>
+                  {resource.title}
+                </h3>
 
-                <h3>{resource.title}</h3>
+                <p>
+                  {resource.description}
+                </p>
 
-                <p>{resource.description}</p>
-
-                <div className="resource-footer">
-                  <span className="resource-meta">
-                    {resource.readTime} · {resource.type}
+                <div className="resource-bottom">
+                  <span>
+                    {resource.meta}
                   </span>
 
-                  <Link
-                    href={`/resources/${index + 1}`}
-                    className="resource-read-link"
-                  >
-                    Read →
+                  <Link href="/resources">
+                    Read More →
                   </Link>
                 </div>
               </div>

@@ -1,14 +1,19 @@
+import Image from "next/image";
+
 export default function HeroSection() {
   return (
     <section className="hero-section">
       <div className="hero-container">
+        {/* LEFT CONTENT */}
         <div className="hero-content">
           <div className="hero-tag">
-            AI-POWERED CAREER GUIDANCE
+            ✦ AI-POWERED CAREER GUIDANCE
           </div>
 
           <h1 className="hero-title">
-            Build a Career You&apos;ll Be
+            Build a Career You&apos;ll
+            <br />
+            Be
             <br />
             <span>Proud Of.</span>
           </h1>
@@ -27,42 +32,75 @@ export default function HeroSection() {
               Talk to an Expert
             </button>
           </div>
+
+          <div className="hero-trust">
+            <div className="hero-trust-avatars">
+              <span>JS</span>
+              <span>AK</span>
+              <span>EM</span>
+            </div>
+
+            <div className="hero-trust-text">
+              <strong>Trusted by Students &amp; Professionals</strong>
+              <span>Start your journey with confidence</span>
+            </div>
+          </div>
         </div>
 
+        {/* RIGHT VISUAL */}
         <div className="hero-visual">
-          <div className="hero-circle circle-one" />
-          <div className="hero-circle circle-two" />
 
-          <div className="hero-card hero-top-card">
-            <span className="small-icon">✦</span>
+          {/* Career Match Card */}
+          <div className="hero-match-card">
+            <span>CAREER MATCH</span>
+
+            <strong>95%</strong>
+
+            <div className="hero-match-line">
+              <div />
+            </div>
+
+            <small>Your best career opportunities</small>
+          </div>
+
+          {/* AI Career Guide Card */}
+          <div className="hero-ai-card">
+            <div className="floating-icon">✦</div>
 
             <div>
               <strong>AI Career Guide</strong>
-              <p>Discover your path</p>
+              <span>Discover the best path for you</span>
             </div>
           </div>
 
-          <div className="hero-card hero-left-card">
-            <span>✦</span>
+          {/* Main Image */}
+          <div className="hero-main-image">
+            <div className="hero-image-placeholder">
+              <div className="hero-person">
+                <div className="hero-head" />
+                <div className="hero-body" />
+              </div>
+            </div>
+          </div>
+
+          {/* Verified Consultant */}
+          <div className="hero-consultant-card">
+            <div className="mini-avatar">SJ</div>
 
             <div>
-              <strong>5+</strong>
-              <p>Career Domains</p>
+              <strong>Verified Consultant</strong>
+              <span>★★★★★</span>
             </div>
           </div>
 
-          <div className="hero-image-wrapper">
-            <img
-              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=800&q=85"
-              alt="Career guidance"
-            />
-          </div>
-
-          <div className="hero-card hero-bottom-card">
+          {/* Career Match Percentage */}
+          <div className="hero-success-card">
             <div>
-              <strong>95%</strong>
-              <p>Career Match</p>
+              <small>Career Match</small>
+              <strong>92%</strong>
             </div>
+
+            <div className="success-circle">✓</div>
           </div>
         </div>
       </div>
